@@ -39,6 +39,7 @@ export default function StudentCard({ student, onDelete, onUpdate }) {
           <button onClick={onDelete} style={{ marginLeft: 10 }}>
             Delete
           </button>
+          <h1>hello fk you soksan</h1>
         </>
       )}
     </div>
