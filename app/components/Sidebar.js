@@ -18,6 +18,7 @@ export default function Sidebar({ children }) {
           <nav style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             <h2 style={{ marginBottom: "20px", fontSize: "20px" }}>🌟 My Menu</h2>
             <Link href="/" style={linkStyle}>🏠 Home</Link>
+            <Link href="/profile" style={linkStyle}>👤 Profile</Link>
             <Link href="/about" style={linkStyle}>📘 About</Link>
             <Link href="/projects" style={linkStyle}>📁 Projects</Link>
             <Link href="/contact" style={linkStyle}>✉️ Contact</Link>
