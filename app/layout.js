@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "./components/Sidebar";
 import { Inter } from "next/font/google";
+import DarkModeToggle from "@/components/mode/DarkModeToggle";
 
 // google font
 const inter = Inter({
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* <DarkModeToggle/> */}
         <Sidebar children={children}/>
         {/* <div style={{ display: 'absolute' }}>{children}</div> */}
       </body>

@@ -1,4 +1,5 @@
 // app/components/Sidebar.js
+import DarkModeToggle from "@/components/mode/DarkModeToggle";
 import Link from "next/link";
 
 export default function Sidebar({ children }) {
@@ -9,18 +10,28 @@ export default function Sidebar({ children }) {
         backgroundColor: "#1e1e1e",
         color: "#fff",
         padding: "20px",
-        boxSizing: "border-box"
+        boxSizing: "border-box",
+        display: "flex",
+        flexDirection:"column",
+        justifyContent:"space-between"
       }}>
-        <h2 style={{ marginBottom: "20px", fontSize: "20px" }}>🌟 My Menu</h2>
-        <nav style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-          <Link href="/" style={linkStyle}>🏠 Home</Link>
-          <Link href="/about" style={linkStyle}>📘 About</Link>
-          <Link href="/projects" style={linkStyle}>📁 Projects</Link>
-          <Link href="/contact" style={linkStyle}>✉️ Contact</Link>
-          <Link href="/more" style={linkStyle}>➕ More</Link>
-          <Link href="/product" style={linkStyle}>📦 Product</Link>
-          <Link href="/students" style={linkStyle}>📦 Students</Link>
-        </nav>
+        
+        
+          <nav style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            <h2 style={{ marginBottom: "20px", fontSize: "20px" }}>🌟 My Menu</h2>
+            <Link href="/" style={linkStyle}>🏠 Home</Link>
+            <Link href="/about" style={linkStyle}>📘 About</Link>
+            <Link href="/projects" style={linkStyle}>📁 Projects</Link>
+            <Link href="/contact" style={linkStyle}>✉️ Contact</Link>
+            <Link href="/more" style={linkStyle}>➕ More</Link>
+            <Link href="/product" style={linkStyle}>📦 Product</Link>
+            <Link href="/students" style={linkStyle}>📦 Students</Link>
+          </nav>
+
+          <nav>
+            <DarkModeToggle/>
+          </nav>
+        
       </aside>
 
       {/* 👉 Render children content beside the sidebar */}
