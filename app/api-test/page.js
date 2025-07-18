@@ -2,8 +2,16 @@
 
 import { useState } from "react";
 
+//1 import route from api 
+
+import { getOneProduct } from "../api/db_api_json/route";
+
+
+
 export default function ApiTestPage() {
   const [response, setResponse] = useState("");
+  const [product, setProduct] = useState(null);
+
 
   async function handleClick() {
     const res = await fetch("/api/todoItem");
@@ -23,6 +31,11 @@ export default function ApiTestPage() {
     setResponse(text);
   }
 
+    async function handleProduct(){
+      const res = await getOneProduct(1);
+      setProduct(res);
+    }
+
   return (
     <div style={{ padding: 20 }}>
       <button onClick={handleClick} style={{ padding: "10px 20px", fontSize: 16 }}>
@@ -37,10 +50,25 @@ export default function ApiTestPage() {
         Hi To the Server
       </button>
 
+      <button onClick={handleProduct}>
+        handle Product
+      </button>
+
       {response && (
         <p style={{ marginTop: 20, fontWeight: "bold" }}>
           Response from API: {response}
         </p>
+      )}
+
+      {/* json product */}
+      
+      {product && (
+        <div style={{ marginTop: 20 }}>
+          <h3>Product Fetched:</h3>
+          <p><strong>Title:</strong> {product.title}</p>
+          <p><strong>Price:</strong> ${product.price}</p>
+          <p><strong>Description:</strong> {product.description}</p>
+        </div>
       )}
     </div>
   );

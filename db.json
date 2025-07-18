@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice Smith",
+      "email": "alice@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Bob Johnson",
+      "email": "bob@example.com"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Wireless Mouse",
+      "description": "A smooth, responsive wireless mouse.",
+      "price": 25.99,
+      "stock": 30,
+      "image": "https://example.com/mouse.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Mechanical Keyboard",
+      "description": "RGB backlit mechanical keyboard.",
+      "price": 75.5,
+      "stock": 20,
+      "image": "https://example.com/keyboard.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Gaming Headset",
+      "description": "Surround sound gaming headset with mic.",
+      "price": 49.99,
+      "stock": 15,
+      "image": "https://example.com/headset.jpg"
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "userId": 1,
+      "productId": 2,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "productId": 3,
+      "quantity": 2
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 2,
+      "items": [
+        { "productId": 1, "quantity": 1 },
+        { "productId": 2, "quantity": 1 }
+      ],
+      "total": 101.49,
+      "date": "2025-07-17"
+    }
+  ]
+}

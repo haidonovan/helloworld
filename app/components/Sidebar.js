@@ -19,6 +19,7 @@ export default function Sidebar({ children }) {
           <Link href="/contact" style={linkStyle}>✉️ Contact</Link>
           <Link href="/more" style={linkStyle}>➕ More</Link>
           <Link href="/product" style={linkStyle}>📦 Product</Link>
+          <Link href="/students" style={linkStyle}>📦 Students</Link>
         </nav>
       </aside>
 
