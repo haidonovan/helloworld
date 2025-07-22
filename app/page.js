@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   const { data: session } = useSession();
-  const count = 1000;
+  const count = 10;
 
   return (
     <>
